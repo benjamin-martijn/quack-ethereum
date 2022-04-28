@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.4.21 <0.7.0;
+pragma solidity >=0.4.21 <0.9.0;
 
 contract ComplexStorage {
     uint public storeduint1 = 15;
     uint public constant constuint = 16;
     uint128 public investmentsLimit = 17055;
-    uint32 public investmentsDeadlineTimeStamp = uint32(now);
+    uint32 public investmentsDeadlineTimeStamp = uint32(block.timestamp);
 
     bytes16 public string1 = "test1";
     bytes32 public string2 = "test1236";
     string public string3 = "lets string something";
 
-    mapping (address => uint) uints1;
-    mapping (address => DeviceData) structs1;
+    mapping(address => uint) uints1;
+    mapping(address => DeviceData) structs1;
 
     uint[] public uintarray;
     DeviceData[] public deviceDataArray;
